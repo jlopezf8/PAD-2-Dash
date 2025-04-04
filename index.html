@@ -57,7 +57,10 @@
             justify-content: center;
         }
 
-        .view-chart-button {
+        .file-link-container {
+            display: none; /* Hide the container */
+        }
+        .file-link {
             padding: 8px 12px;
             background-color: #4CAF50;
             color: white;
@@ -65,21 +68,15 @@
             cursor: pointer;
             border: none;
             font-size: 0.8rem;
-            margin: 0 auto; /* Center the button */
+            text-decoration: none;
         }
-        .view-chart-button:hover {
+        .file-link:hover {
             background-color: #367c39;
         }
-
-        .chart-placeholder {
+        .plotly-graph-div {
             width: 100%;
-            height: 400px; /* Or any default height */
-            background-color: #f0f0f0; /* Light grey placeholder */
-            border-radius: 0.5rem;
-            display: none; /* Initially hidden */
-            margin-top: 10px;
+            height: 100%;
         }
-
     </style>
 </head>
 <body class="flex min-h-screen font-sans">
@@ -101,189 +98,76 @@
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Brief PAD description</h2>
             <p class="mb-4">This section provides a general overview of all well interventions.</p>
             <div class="plot-container" id="intro-bar-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/intro_plot_1.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="intro_plot_1.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
             <div class="plot-container" id="intro-pie-chart-1">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/intro_plot_2.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                 <iframe src="intro_plot_2.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
              <div class="plot-container" id="intro-pie-chart-2">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/intro_plot_3.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                 <iframe src="intro_plot_3.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
             <p class="mb-4">Target assuming full horizontal bore capacity filled with sand</p>
             <div class="plot-container" id="intro-sand-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/intro_plot_4.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="intro_plot_4.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
         <section id="rigupwellswap" class="mb-8">
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Rig Up & Well Swap Plots</h2>
             <div class="plot-container" id="rigup-bar-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/rig_up_well_swap_time.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="rig_up_well_swap_time.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
             <div class="plot-container" id="rigup-multi-bar-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/time_breakdown.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                 <iframe src="time_breakdown.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
         <section id="timeframes" class="mb-8">
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Intervention Timeframes</h2>
              <p class="mb-4">Well Intervention Performance by days</p>
             <div class="plot-container" id="timeframes-line-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/elapsed_days.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="elapsed_days.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Intervention Efficiency</h2>
             <p class="mb-4">The expected completion time is adjusted based on well complexity</p>
             <div class="plot-container" id="timeframes-cleaning-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/cleaning_time.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="cleaning_time.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
         <section id="sandbubbles" class="mb-8">
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Sand Recovered</h2>
             <div class="plot-container" id="sandbubbles-accumulated-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/sand_bubble_plot.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="sand_bubble_plot.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
         <section id="Pressure" class="mb-8">
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Pressure Histograms</h2>
             <div class="plot-container" id="pressure-histograms">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/circ_press_histogram.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="circ_press_histogram.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
             <div class="plot-container" id="pressure-histograms-2">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/wh_press_histogram.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="wh_press_histogram.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
         <section id="circulation" class="mb-8">
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Rate Histograms</h2>
             <div class="plot-container" id="circulation-histograms">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/pump_rate_histogram.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="pump_rate_histogram.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
         <section id="extendedreachtool" class="mb-8">
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Extended Reach Tool Plots</h2>
             <div class="plot-container" id="ert-line-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/average_speed_vs_depth.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="average_speed_vs_depth.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
             <div class="plot-container" id="ert-box-plot">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/average_speed_distribution.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="average_speed_distribution.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
         <section id="tubingforce" class="mb-8">
             <h2 class="page-header text-2xl font-semibold text-gray-800 mb-4">Tubing Force Plots</h2>
             <div class="plot-container" id="tubing-force-chart">
-                <button class="view-chart-button" data-chart-url="PAD-2-Dash/tubing_force_plots.html">View Chart</button>
-                <div class="chart-placeholder"></div>
+                <iframe src="tubing_force_plots.html" width="100%" height="400px" style="border:none;"></iframe>
             </div>
         </section>
     </div>
-    <script>
-        const plotContainers = document.querySelectorAll('.plot-container');
-
-        plotContainers.forEach(container => {
-            const viewChartButton = container.querySelector('.view-chart-button');
-            const chartPlaceholder = container.querySelector('.chart-placeholder');
-
-            viewChartButton.addEventListener('click', function() {
-                const chartUrl = this.getAttribute('data-chart-url');
-                const chartContainer = this.nextElementSibling;
-
-                // Fetch the content of the HTML file
-                fetch(chartUrl)
-                    .then(response => response.text())
-                    .then(htmlContent => {
-                        chartContainer.innerHTML = htmlContent; // Insert content into placeholder
-
-                        // 1. Create a temporary container for parsing
-                        const tempDiv = document.createElement('div');
-                        tempDiv.innerHTML = htmlContent;
-
-                        // 2. Extract script tags
-                        const scripts = tempDiv.querySelectorAll('script');
-                        const scriptContents = [];
-                        scripts.forEach(script => {
-                            if (script.src) {
-                                // Fetch external scripts
-                                fetch(script.src)
-                                    .then(response => response.text())
-                                    .then(scriptText => {
-                                        scriptContents.push(scriptText);
-                                        // Check if all scripts are loaded and then render
-                                        if (scriptContents.length === scripts.length) {
-                                            renderPlotly(chartContainer, tempDiv, scriptContents);
-                                        }
-                                    })
-                                    .catch(error => {
-                                        console.error('Error fetching script:', error);
-                                        chartContainer.innerHTML = `<div class="text-red-500">Error loading chart. Please try again.</div>`;
-                                    });
-                            } else {
-                                // Collect inline scripts
-                                scriptContents.push(script.textContent);
-                                if (scriptContents.length === scripts.length) {
-                                    renderPlotly(chartContainer, tempDiv, scriptContents);
-                                }
-                            }
-                        });
-                        if (scripts.length === 0) {
-                            renderPlotly(chartContainer, tempDiv, scriptContents);
-                        }
-
-                        chartPlaceholder.style.display = 'flex'; // Show the placeholder
-                        this.style.display = 'none'; // Hide the button
-                    })
-                    .catch(error => {
-                        console.error('Error fetching chart:', error);
-                        chartContainer.innerHTML = `<div class="text-red-500">Error loading chart. Please try again.</div>`;
-                    });
-            });
-        });
-
-        function renderPlotly(chartContainer, tempDiv, scriptContents) {
-            // 3. Find the Plotly graph element
-            const plotlyDiv = tempDiv.querySelector('.plotly-graph-div');
-
-            if (plotlyDiv) {
-                // 4.  Import the Plotly graph.
-                chartContainer.innerHTML = plotlyDiv.outerHTML;
-
-                // 5. Execute the scripts
-                scriptContents.forEach(scriptContent => {
-                    try {
-                        eval(scriptContent);
-                    } catch (error) {
-                        console.error('Error executing script:', error);
-                        chartContainer.innerHTML = `<div class="text-red-500">Error rendering chart. Invalid script.</div>`;
-                    }
-                });
-
-                // 6. Adjust the size of the imported graph
-                const importedPlotlyDiv = chartContainer.querySelector('.plotly-graph-div');
-                if (importedPlotlyDiv) {
-                    importedPlotlyDiv.style.width = "100%";
-                    importedPlotlyDiv.style.height = "100%";
-                }
-            }
-            else {
-                // 7. If .plotly-graph-div is not found, import the whole content.
-                chartContainer.innerHTML = htmlContent;
-                const importedContent = chartContainer.firstChild;
-                if (importedContent) {
-                    importedContent.style.width = "100%";
-                    importedContent.style.height = "100%";
-                }
-            }
-        }
-    </script>
 </body>
 </html>
